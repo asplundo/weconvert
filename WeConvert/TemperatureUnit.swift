@@ -1,14 +1,14 @@
 
 import Foundation
 
-enum Units: String {
+enum TemperatureUnit: String {
     case celcius = "celcius"
     case fahrenheit = "fahrenheit"
     case kelvin = "kelvin"
 }
 
-extension Units: CaseIterable { }
+extension TemperatureUnit: CaseIterable { }
 
-extension Units: Identifiable {
+extension TemperatureUnit: Identifiable {
     var id: String { rawValue }
 }

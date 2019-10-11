@@ -6,7 +6,7 @@ struct UnitPicker: View {
     
     var body: some View {
         Picker("Unit", selection: $unit) {
-            List(Units.allCases) { unit in
+            List(TemperatureUnit.allCases) { unit in
                 Text(unit.rawValue)
             }
         }.pickerStyle(SegmentedPickerStyle())

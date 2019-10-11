@@ -13,8 +13,9 @@
 		10FF2E082350F42300D28E86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10FF2E072350F42300D28E86 /* Assets.xcassets */; };
 		10FF2E0B2350F42300D28E86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10FF2E0A2350F42300D28E86 /* Preview Assets.xcassets */; };
 		10FF2E0E2350F42300D28E86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10FF2E0C2350F42300D28E86 /* LaunchScreen.storyboard */; };
-		10FF2E162350F6BF00D28E86 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF2E152350F6BF00D28E86 /* Units.swift */; };
+		10FF2E162350F6BF00D28E86 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF2E152350F6BF00D28E86 /* TemperatureUnit.swift */; };
 		10FF2E182350FE0700D28E86 /* UnitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF2E172350FE0700D28E86 /* UnitPicker.swift */; };
+		10FF2E1B235126E700D28E86 /* TemperatureConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FF2E1A235126E700D28E86 /* TemperatureConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		10FF2E0A2350F42300D28E86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10FF2E0D2350F42300D28E86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10FF2E0F2350F42300D28E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10FF2E152350F6BF00D28E86 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		10FF2E152350F6BF00D28E86 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
 		10FF2E172350FE0700D28E86 /* UnitPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitPicker.swift; sourceTree = "<group>"; };
+		10FF2E1A235126E700D28E86 /* TemperatureConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,11 @@
 		10FF2E002350F42000D28E86 /* WeConvert */ = {
 			isa = PBXGroup;
 			children = (
+				10FF2E1C2351271D00D28E86 /* model */,
+				10FF2E19235126BD00D28E86 /* View */,
 				10FF2E012350F42000D28E86 /* AppDelegate.swift */,
 				10FF2E032350F42000D28E86 /* SceneDelegate.swift */,
-				10FF2E172350FE0700D28E86 /* UnitPicker.swift */,
-				10FF2E052350F42000D28E86 /* ContentView.swift */,
-				10FF2E152350F6BF00D28E86 /* Units.swift */,
+				10FF2E152350F6BF00D28E86 /* TemperatureUnit.swift */,
 				10FF2E072350F42300D28E86 /* Assets.xcassets */,
 				10FF2E0C2350F42300D28E86 /* LaunchScreen.storyboard */,
 				10FF2E0F2350F42300D28E86 /* Info.plist */,
@@ -79,6 +81,23 @@
 				10FF2E0A2350F42300D28E86 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		10FF2E19235126BD00D28E86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10FF2E052350F42000D28E86 /* ContentView.swift */,
+				10FF2E172350FE0700D28E86 /* UnitPicker.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10FF2E1C2351271D00D28E86 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				10FF2E1A235126E700D28E86 /* TemperatureConverter.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				10FF2E022350F42000D28E86 /* AppDelegate.swift in Sources */,
-				10FF2E162350F6BF00D28E86 /* Units.swift in Sources */,
+				10FF2E162350F6BF00D28E86 /* TemperatureUnit.swift in Sources */,
 				10FF2E042350F42000D28E86 /* SceneDelegate.swift in Sources */,
+				10FF2E1B235126E700D28E86 /* TemperatureConverter.swift in Sources */,
 				10FF2E062350F42000D28E86 /* ContentView.swift in Sources */,
 				10FF2E182350FE0700D28E86 /* UnitPicker.swift in Sources */,
 			);
