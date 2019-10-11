@@ -8,29 +8,29 @@ struct TemperatureConverter {
     
     var outputTemperature: Double {
         let celcius = inCelcius
-        let temperature: Double
+        let temperature: Measurement<UnitTemperature>
         switch outputUnit {
         case .fahrenheit:
-            temperature = (celcius * 1.8) + 32
+            temperature = celcius.converted(to: .fahrenheit)
         case .kelvin:
-            temperature = celcius + 273.15
+            temperature = celcius.converted(to: .kelvin)
         case .celcius:
             temperature = celcius
         }
-        return temperature
+        return temperature.value
         
     }
     
-    private var inCelcius: Double {
-        let celcius: Double
+    private var inCelcius: Measurement<UnitTemperature> {
+        let measurement: Measurement<UnitTemperature>
         switch inputUnit {
         case .fahrenheit:
-            celcius = (inputTemperature - 32) / 1.8
+            measurement = Measurement(value: inputTemperature, unit: UnitTemperature.fahrenheit)
         case .kelvin:
-            celcius = inputTemperature - 273.15
+            measurement = Measurement(value: inputTemperature, unit: UnitTemperature.kelvin)
         case .celcius:
-            celcius = inputTemperature
+            measurement = Measurement(value: inputTemperature, unit: UnitTemperature.celsius)
         }
-        return celcius
+        return measurement.converted(to: .celsius)
     }
 }
